@@ -10,7 +10,7 @@ section{padding:56px 0}.alt{background:rgba(127,100,60,.08)}
 nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:6;background:var(--deep);color:#fff}
 nav .wrap{display:flex;justify-content:space-between;align-items:center;height:58px;gap:12px}
 nav b{font:700 1.1rem Fraunces,serif;white-space:nowrap}
-nav div a{margin-left:16px;text-decoration:none;font-size:.95rem}
+nav .wrap>div a{margin-left:16px;text-decoration:none;font-size:.95rem}
 .btn{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#241800;font:700 1rem Mukta,sans-serif;padding:12px 22px;border:0;border-radius:8px;text-decoration:none;cursor:pointer}
 .btn.alt2{background:#25a244;color:#fff}.btn.out{background:transparent;color:inherit;border:2px solid currentColor}
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,.slider:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
@@ -74,7 +74,7 @@ footer.site h3{color:#fff;font-size:1.1rem}footer.site p{margin:.3em 0}
 .float{position:fixed;top:auto;height:auto;left:0;right:0;bottom:0;z-index:7;display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--deep);padding-bottom:env(safe-area-inset-bottom,0px)}
 .float a{color:#fff;text-align:center;padding:12px 4px;font-weight:700;text-decoration:none;font-size:.95rem;border-right:1px solid rgba(255,255,255,.2)}.float a:last-child{border:0}
 @media(min-width:900px){.float{display:none}body{padding-bottom:0}}
-@media(max-width:760px){.about,.loc,.room{grid-template-columns:1fr}.room img{min-height:200px}nav div a:not(.btn){display:none}section{padding:40px 0}}
+@media(max-width:760px){.about,.loc,.room{grid-template-columns:1fr}.room img{min-height:200px}nav .wrap>div a:not(.btn){display:none}section{padding:40px 0}}
 @media(max-width:600px){.arrow{display:none}}
 @media(max-width:480px){body{font-size:16px}.cap{padding-bottom:50px}nav b{font-size:.98rem}}
 @media(prefers-reduced-motion:reduce){.slide,.slide.on{transition:none;transform:none}.slide.on img,.slide.on .cap>*,.bar.run{animation:none}.slide .cap>*{opacity:1}.bar{display:none}html{scroll-behavior:auto}.gal img{transition:none}}
@@ -82,3 +82,15 @@ footer.site h3{color:#fff;font-size:1.1rem}footer.site p{margin:.3em 0}
 /* Contact message line */
 .quick .msg{flex-basis:100%;margin:0;text-align:center;font-weight:700}
 .quick .msg a{text-decoration:underline}
+
+/* Logo with Ramana Maharshi image */
+nav .brand{display:flex;flex-direction:row;align-items:center;gap:10px;color:#fff;text-decoration:none;margin:0;min-width:0}
+nav .brand img{flex:0 0 auto;width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.6);background:#fff}
+
+/* Room rates */
+.rates{display:flex;flex-direction:column;gap:6px}
+.rates .rate{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:8px 0;border-bottom:1px dashed var(--line)}
+.rates .rate span{font-weight:600}
+.rates .rate strong{font:700 1.4rem Fraunces,serif}
+.rates small{display:block;margin-top:4px}
+@media(max-width:380px){nav .wrap{padding:0 12px;gap:8px}nav b{font-size:.85rem}nav .brand{gap:8px}nav .brand img{width:34px;height:34px}nav .btn{padding:8px 14px}}
